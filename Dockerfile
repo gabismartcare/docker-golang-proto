@@ -1,7 +1,7 @@
-FROM golang:1.13-alpine
+FROM golang:1.13-stretch
 
-RUN apk update && \
-    apk add ca-certificates unzip curl git make
+RUN apt-get update && \
+    apt-get install -y ca-certificates unzip curl git make
 
 ENV PROTOC_VERSION=3.7.1
 ENV PROTOC_ZIP=protoc-$PROTOC_VERSION-linux-x86_64.zip

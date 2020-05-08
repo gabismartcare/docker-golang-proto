@@ -1,5 +1,5 @@
 IMAGE:=golang-proto
-VERSION:=14.0-3.11.4-alpine
+VERSION:=14.2-3.11.4-buster
 
 docker:
 	docker build -t $(IMAGE):$(VERSION) .

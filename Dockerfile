@@ -1,6 +1,6 @@
-FROM golang:1.14.0-alpine3.11
+FROM golang:1.14.2-buster
 
-RUN apk add ca-certificates unzip curl git make protoc bash
+RUN apt-get update && apt-get install -y ca-certificates unzip curl git make bash
 
 ENV PROTO_ROOT_DIR=/usr/local/include
 ENV PROTOC_VERSION=3.11.4

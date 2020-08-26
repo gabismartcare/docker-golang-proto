@@ -1,4 +1,4 @@
-FROM golang:1.14.6-buster
+FROM golang:1.15.0-buster
 
 RUN apt-get update && apt-get install -y ca-certificates unzip curl git make bash
 

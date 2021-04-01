@@ -1,9 +1,9 @@
-FROM golang:1.16.0-stretch
+FROM golang:1.16.2-stretch
 
 RUN apt-get update && apt-get install -y ca-certificates unzip curl git make  bash
 
 ENV PROTO_ROOT_DIR=/usr/local/include
-ENV PROTOC_VERSION=3.15.5
+ENV PROTOC_VERSION=3.15.6
 ENV PROTOC_ZIP=protoc-$PROTOC_VERSION-linux-x86_64.zip
 RUN curl -OL  https://github.com/google/protobuf/releases/download/v$PROTOC_VERSION/$PROTOC_ZIP
 RUN unzip -o $PROTOC_ZIP -d /usr/local bin/protoc 
